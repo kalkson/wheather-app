@@ -1,3 +1,3 @@
-window.onload = () => {
-  document.getElementById('root').textContent = 'Hello Damian!';
-};
+import validateForm from './scripts/validateForm';
+
+validateForm();

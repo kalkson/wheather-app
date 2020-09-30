@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JS Starter</title>
+    <title>Weather App by DK</title>
     <link rel="stylesheet" href="./scss/styles.scss" />
   </head>
   <body>
-    <main id="root"></main>
+    <main class="root">
+      <header class="root__header">Sign a location!</header>
+      <form class="root__form">
+        <input
+          class="root__form__input"
+          type="text"
+          name="location"
+          id="location"
+          placeholder="eg.: London"
+        />
+        <button class="root__form__button">Get weather</button>
+      </form>
+      <article class="root__details"></article>
+    </main>
     <script src="./js/index.js"></script>
   </body>
 </html>
