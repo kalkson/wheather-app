@@ -1,5 +1,6 @@
 // import { gsap } from 'gsap';
 import downloadWeather from './../API/downloadWeather';
+import downloadForecast from './../API/downloadForecast';
 
 export default () => {
   const form = document.querySelector('.root__form');
@@ -11,6 +12,7 @@ export default () => {
 
     if (value && value.length >= 3) {
       downloadWeather(value);
+      downloadForecast(value);
     }
   });
 };

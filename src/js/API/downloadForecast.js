@@ -1,12 +1,11 @@
-import { base_URL } from './URL';
-import insertData from './insertData';
+import { base_URLforecast } from './URL';
 
 export default async (city) => {
-  return await fetch(`${base_URL}&q=${city}`)
+  return await fetch(`${base_URLforecast}&q=${city}&days=10`)
     .then((response) => response.json())
     .then((data) => {
       if (!data.error) {
-        insertData(data);
+        console.log(data);
       }
     })
     .catch((err) => {

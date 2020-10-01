@@ -1,5 +1,7 @@
 body {
-  background-color: cyan;
+  // background: url('/src/images/bg.jpg') no-repeat;
+  background: url('http://t1.gstatic.com/images?q=tbn:ANd9GcS4ZG1yrOJhTgkNP7_a_h_ILrOWuMNEQ25AntOk7vi5ss0q83FmEFcjsnnflnuxzEEMFjwxS9QS34zUn6xdoF8')
+    no-repeat content-box;
 }
 
 .root {
@@ -50,9 +52,34 @@ body {
       }
     }
 
+    &__suggestion-list {
+      width: 450px;
+      top: calc(40vh + 83px);
+      border: solid 2px #ffd82b;
+      display: none;
+
+      & > * {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        font-size: 1.3rem;
+        border: none;
+        transition: all ease-in-out 100ms;
+        z-index: 2;
+
+        &:focus,
+        &:hover {
+          background-color: $darkFont;
+          color: $fairColor;
+          cursor: pointer;
+        }
+      }
+    }
+
     &__button {
       @include formItem(2rem);
 
+      position: relative;
       width: fit-content;
       padding: 15px 60px !important;
       background: rgb(255, 216, 43);
@@ -90,7 +117,7 @@ body {
   &__details {
     width: 600px;
     height: 300px;
-    background-color: $fairColor;
+    background-color: rgba(255, 255, 255, 0.5);
     top: 20%;
     position: absolute;
     flex-direction: column;
@@ -101,8 +128,9 @@ body {
     font-weight: 900;
 
     &__icon {
-      max-width: 70px;
+      transform: scale(1.5);
       align-self: center;
+      margin-top: 40px;
     }
 
     &__temperature {
@@ -115,12 +143,18 @@ body {
     &__info {
       display: flex;
       justify-content: space-around;
-      margin-top: 60px;
+      margin-top: 30px;
 
       & > span {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        & > span {
+          transform: translateY(-10px);
+          font-size: 1.4rem;
+          color: $darkFont;
+        }
 
         & > svg {
           width: 50px;

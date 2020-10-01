@@ -9,7 +9,7 @@
   </head>
   <body>
     <main class="root">
-      <form class="root__form">
+      <form class="root__form" autocomplete="off">
         <header class="root__header">Sign a location!</header> 
         <input
           class="root__form__input"
@@ -17,18 +17,21 @@
           name="location"
           id="location"
           placeholder="eg.: London"
+          autofocus
         />
+        <div class="root__form__suggestion-list">
+        </div>
         <button class="root__form__button">Get weather</button>
-      </form>
+      </form >
       <header class="root__name__header"></header>
       <article class="root__details">
         <img class="root__details__icon">
         <div class="root__details__temperature">42 &#176</div>
         <div class="root__details__info">
-          <span class="root__details__info__element humidity"><svg><use href="./images/humidity.svg"></svg><div>67%</div> </span>
-          <span class="root__details__info__element rain"><svg><use href="./images/rain.svg"></svg><div>40%</div></span>
-          <span class="root__details__info__element pressure"><svg><use href="./images/pressure.svg"></svg><div>1012 HPa</div></span>
-          <span class="root__details__info__element wind"><svg><use href="./images/wind.svg"></svg><div>17 km/h</div></span>
+          <span class="root__details__info__element humidity"><span>Humidity</span><svg><use href="./images/humidity.svg"></svg><div>67%</div> </span>
+          <span class="root__details__info__element rain"><span>Precipitation</span><svg><use href="./images/rain.svg"></svg><div>40%</div></span>
+          <span class="root__details__info__element pressure"><span>Pressure</span><svg><use href="./images/pressure.svg"></svg><div>1012 HPa</div></span>
+          <span class="root__details__info__element wind"><span>Wind</span><svg><use href="./images/wind.svg"></svg><div>17 km/h</div></span>
         </div>
       </article>
     </main>

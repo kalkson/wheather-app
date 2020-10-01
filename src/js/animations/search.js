@@ -11,11 +11,19 @@ export default () => {
     document.querySelector('.root__details__info').children
   );
   const locationHeader = document.querySelector('.root__name__header');
+  const wrapper = document.querySelector('.root__form__suggestion-list');
 
   gsap.fromTo(
     locationHeader,
     { transform: 'translateY(-50px)', opacity: 0 },
     { duration: 1, ease: 'ease-in', transform: 'translateY(0)', opacity: 1 }
+  );
+
+  gsap.to(wrapper, { width: '270px' });
+  gsap.fromTo(
+    wrapper,
+    { translateY: 'calc(40vh + 83px)' },
+    { translateY: '30vh' }
   );
 
   tl.fromTo(
