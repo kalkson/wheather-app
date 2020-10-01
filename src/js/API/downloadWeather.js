@@ -2,7 +2,7 @@ import { base_URL } from './URL';
 import insertData from './insertData';
 
 export default async (city) => {
-  return await fetch(`${base_URL}&q=${city}`)
+  return await fetch(`${base_URL}&q=${city}`, { mode: 'no-cors' })
     .then((response) => response.json())
     .then((data) => {
       if (!data.error) {
