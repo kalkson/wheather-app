@@ -6,6 +6,7 @@ export default async (city) => {
     .then((response) => response.json())
     .then((data) => {
       if (!data.error) {
+        console.log(data);
         insertData(data);
       }
     })

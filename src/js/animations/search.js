@@ -8,7 +8,7 @@ export default () => {
   const button = document.querySelector('.root__form__button');
   const detailsWrapper = document.querySelector('.root__details');
   const infoWrapperElements = Array.from(
-    document.querySelector('.root__details__info').children
+    document.querySelector('.root__details__primary').children
   );
   const locationHeader = document.querySelector('.root__name__header');
   const wrapper = document.querySelector('.root__form__suggestion-list');

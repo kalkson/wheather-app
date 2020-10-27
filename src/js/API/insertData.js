@@ -18,9 +18,20 @@ export default (data) => {
   document.querySelector('.wind div').textContent = wind + ' km/h';
   document.querySelector('.humidity div').textContent = humidity + ' %';
   document.querySelector('.rain div').textContent = rain + ' mm';
-  document.querySelector('.root__details__temperature').textContent =
+  document.querySelector('.root__details__primary__temperature').textContent =
     temperature + '°';
-  document.querySelector('.root__details__icon').src = icon;
+  document.querySelector('.root__details__primary__icon').src = icon;
+  document.querySelector(
+    '.root__details__primary__icon__desc'
+  ).textContent = text;
+  document.querySelector(
+    '.root__details__secondary__time__localtime'
+  ).innerHTML = `Local time: <span style="color: #3D3D3D;">${localtime}</span>`;
+  document.querySelector(
+    '.root__details__secondary__time__lastupdated'
+  ).innerHTML = `Last updated: <span style="color: #3D3D3D;">${
+    last_updated.split(' ')[1]
+  }</span>`;
 
   animateSearch();
 };
