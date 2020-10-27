@@ -1,5 +1,5 @@
 node_modules
-# dist
+dist
 !/.gitignore
 !/.babelrc
 yarn-error.log
